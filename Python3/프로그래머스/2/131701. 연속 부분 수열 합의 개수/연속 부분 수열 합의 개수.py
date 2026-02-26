@@ -1,13 +1,13 @@
 def solution(num):
-    box = []
-    num_len = len(num)     
-    test = num * 2
-    test_len = len(test)
+    num_len = len(num)
+    test = num * 2  
+    box = set()     
 
     for i in range(num_len):
-        for j in range(i+1,i+num_len+1):
-            box.append(sum(test[i:j]))
-           
-    total = list(set(box))
-    
-    return len(total)
+        current_sum = 0
+
+        for j in range(i, i + num_len):
+            current_sum += test[j]
+            box.add(current_sum)
+
+    return len(box)
