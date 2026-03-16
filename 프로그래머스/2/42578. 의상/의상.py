@@ -5,10 +5,7 @@ def solution(clothes):
                 
     for i in clothes:
         kind = i[1]
-        if kind in gear_count:
-            gear_count[kind] = gear_count[kind] + 1
-        else:
-            gear_count[kind] = 2
+        gear_count[i[1]] = gear_count.get(i[1],1) + 1
             
     print(gear_count)
     
