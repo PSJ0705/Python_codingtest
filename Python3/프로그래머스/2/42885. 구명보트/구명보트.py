@@ -6,12 +6,10 @@ def solution(people, limit):
     
     while i <= j:
         if people[i] + people[j] <= limit:
-            print(people[i], people[j])
             i += 1
             j -= 1
             cnt += 1
         else:
-            print(people[i])
             i += 1
             cnt +=1
     
